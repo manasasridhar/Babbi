@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:datetime="http://exslt.org/dates-and-times" xmlns:set="http://exslt.org/sets" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:math="http://exslt.org/math" xmlns:lxslt="http://xml.apache.org/xslt" xmlns:xalan="http://xml.apache.org/xslt" xmlns:java="http://xml.apache.org/xslt/java" exclude-result-prefixes="xalan java lxslt" xmlns:ns1="http://www.w3.org/2001/XMLSchema" xmlns:ns3="http://www.fiorano.com/fesb/activity/ISOMessage" xmlns:Date="ext1" xmlns:dateConversion="ext2" xmlns:myext="ext3" xmlns:strings="ext4" xmlns:test="ext5" extension-element-prefixes="datetime set math Date dateConversion myext strings test">
+  <xsl:output method="xml" indent="yes" encoding="UTF-8" xalan:indent-amount="2" omit-xml-declaration="no"></xsl:output>
+  <xsl:variable name="document" select="/"></xsl:variable>
+  <xsl:variable name="document_MobileBanking" select="document('MobileBanking')"></xsl:variable>
+  <xsl:template match="/">
+    <ns3:ISOMessage>
+      <ns3:MTI>
+        <xsl:value-of select="$document_MobileBanking/ns3:ISOMessage/ns3:MTI"></xsl:value-of>
+      </ns3:MTI>
+      <ns3:Fields>
+        <ns3:field_2>
+          <xsl:value-of select="$document_MobileBanking/ns3:ISOMessage/ns3:Fields/ns3:field_2"></xsl:value-of>
+        </ns3:field_2>
+        <ns3:field_3>
+          <xsl:value-of select="$document_MobileBanking/ns3:ISOMessage/ns3:Fields/ns3:field_3"></xsl:value-of>
+        </ns3:field_3>
+        <ns3:field_4>
+          <xsl:value-of select="$document_MobileBanking/ns3:ISOMessage/ns3:Fields/ns3:field_4"></xsl:value-of>
+        </ns3:field_4>
+        <ns3:field_11>
+          <xsl:value-of select="$document_MobileBanking/ns3:ISOMessage/ns3:Fields/ns3:field_11"></xsl:value-of>
+        </ns3:field_11>
+        <ns3:field_12>
+          <xsl:value-of select="$document_MobileBanking/ns3:ISOMessage/ns3:Fields/ns3:field_12"></xsl:value-of>
+        </ns3:field_12>
+        <ns3:field_17>
+          <xsl:value-of select="$document_MobileBanking/ns3:ISOMessage/ns3:Fields/ns3:field_17"></xsl:value-of>
+        </ns3:field_17>
+        <ns3:field_24>
+          <xsl:value-of select="$document_MobileBanking/ns3:ISOMessage/ns3:Fields/ns3:field_24"></xsl:value-of>
+        </ns3:field_24>
+        <ns3:field_32>
+          <xsl:value-of select="$document_MobileBanking/ns3:ISOMessage/ns3:Fields/ns3:field_32"></xsl:value-of>
+        </ns3:field_32>
+        <ns3:field_41>
+          <xsl:value-of select="$document_MobileBanking/ns3:ISOMessage/ns3:Fields/ns3:field_41"></xsl:value-of>
+        </ns3:field_41>
+        <ns3:field_42>
+          <xsl:value-of select="$document_MobileBanking/ns3:ISOMessage/ns3:Fields/ns3:field_42"></xsl:value-of>
+        </ns3:field_42>
+        <ns3:field_43>
+          <xsl:value-of select="$document_MobileBanking/ns3:ISOMessage/ns3:Fields/ns3:field_43"></xsl:value-of>
+        </ns3:field_43>
+        <ns3:field_49>
+          <xsl:value-of select="$document_MobileBanking/ns3:ISOMessage/ns3:Fields/ns3:field_49"></xsl:value-of>
+        </ns3:field_49>
+        <ns3:field_102>
+          <xsl:value-of select="$document_MobileBanking/ns3:ISOMessage/ns3:Fields/ns3:field_102"></xsl:value-of>
+        </ns3:field_102>
+        <ns3:field_123>
+          <xsl:value-of select="$document_MobileBanking/ns3:ISOMessage/ns3:Fields/ns3:field_123"></xsl:value-of>
+        </ns3:field_123>
+        <ns3:field_126>
+          <xsl:value-of select="$document_MobileBanking/ns3:ISOMessage/ns3:Fields/ns3:field_126"></xsl:value-of>
+        </ns3:field_126>
+      </ns3:Fields>
+    </ns3:ISOMessage>
+  </xsl:template>
+</xsl:stylesheet>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<layout>
+  <subflow name="FIORANO.ESTUDIO.ROOT_FLOW" x="0" y="0">
+    <service-instance name="ReadISOMsg" x="322" y="152"/>
+    <service-instance name="RouteChannel" x="496" y="108"/>
+    <service-instance name="BalInqRequest" x="192" y="220"/>
+    <service-instance name="sendtoC24" x="816" y="180"/>
+    <service-instance name="CreateISOMsg" x="664" y="109"/>
+  </subflow>
+</layout>
